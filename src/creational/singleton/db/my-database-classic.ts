@@ -2,7 +2,7 @@ import { User } from '../interfaces/user';
 
 const users: User[] = [];
 
-export const MyDatabaseClassic = {
+export const MyDatabaseClassic = (() => ({
   addUser(newUser: User): void {
     users.push(newUser);
   },
@@ -16,4 +16,4 @@ export const MyDatabaseClassic = {
       console.log(user);
     }
   },
-};
+}))();
