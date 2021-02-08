@@ -1,11 +1,9 @@
-import { MealBox } from './creational/builder/classes/meal-box';
-import { Beans, Meat, Rice } from './creational/builder/classes/meals';
+import { MainDishBuilder } from './creational/builder/classes/main-dish-builder';
 
-const rice = new Rice('Arroz', 10);
-const beans = new Beans('Feijão', 10);
-const meat = new Meat('Carne', 20);
-const mealBox = new MealBox();
+const mainDishBuilder = new MainDishBuilder();
+mainDishBuilder.makeDish().makeDessert();
+console.log(mainDishBuilder.getMeal());
+mainDishBuilder.reset();
 
-mealBox.addMeal(rice, beans, meat);
-
-console.log(mealBox.getPrice());
+const meal2Price = mainDishBuilder.makeBeverage().getPrice();
+console.log(meal2Price);
