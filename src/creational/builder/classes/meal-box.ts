@@ -6,7 +6,7 @@ export class MealBox implements MealCompositeContract {
     return this._children.reduce((sum, meal) => sum + meal.getPrice(), 0);
   }
 
-  addMeal(...newMeal: MealCompositeContract[]): void {
+  add(...newMeal: MealCompositeContract[]): void {
     newMeal.forEach((item) => this._children.push(item));
   }
 }
