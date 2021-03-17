@@ -8,5 +8,6 @@ const personPrototype = {
 };
 
 const anotherPerson = Object.create(personPrototype);
-
+anotherPerson.firstName = `Will`;
+console.log(anotherPerson.age);
 console.log(anotherPerson.firstName);
