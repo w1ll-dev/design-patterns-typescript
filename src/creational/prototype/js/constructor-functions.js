@@ -7,7 +7,7 @@ const personPrototype = {
   },
 };
 
-function Person(firstName, lastName, age) {
+function Person(lastName, age) {
   this.lastName = lastName; //shadowing last name of prototype
   this.age = age;
 }
@@ -27,4 +27,5 @@ SubPerson.prototype.constructor = SubPerson;
 const newPerson = new Person();
 const newSubPerson = new SubPerson();
 
-console.log(newSubPerson);
+console.table(newPerson);
+console.table(newSubPerson);
