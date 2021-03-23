@@ -1,6 +1,7 @@
 import { Vehicle } from './vehicle';
 
 export class Bicycle implements Vehicle {
+  name = 'Bicycle';
   constructor() {}
 
   pickUp(costumerName: string): void {
