@@ -3,7 +3,7 @@ import { Vehicle } from '../vehicle/vehicle';
 import { VehicleFactory } from './vehicle-factory';
 
 export class BicycleFactory extends VehicleFactory {
-  vehicleFactory(): Vehicle {
+  createVehicle(): Vehicle {
     return new Bicycle();
   }
 }
