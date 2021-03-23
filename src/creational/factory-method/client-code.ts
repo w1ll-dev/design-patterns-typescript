@@ -1,6 +1,11 @@
-import { CarFactory } from './factories/car-factory';
+import { randomVehicleAlgorithm } from './main/main';
+import { randomNumber } from './utils/random-numbers';
 
-const carFactory = new CarFactory();
-const fusca = carFactory.vehicleFactory('Fusca');
-fusca.pickUp('Will');
-fusca.stop();
+const costumersNames = ['Will', 'Felipe', 'Alan', 'Ruben'];
+
+for (let i = 0; i < 10; i++) {
+  const vehicle = randomVehicleAlgorithm();
+  const randomCostumer = costumersNames[randomNumber(costumersNames.length)];
+  vehicle.pickUp(randomCostumer);
+  vehicle.stop();
+}
