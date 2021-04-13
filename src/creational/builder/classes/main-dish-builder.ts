@@ -11,11 +11,13 @@ export class MainDishBuilder implements MealBuilderContract {
     this._meal.add(rice, meat, beans);
     return this;
   }
+
   makeBeverage(): this {
     const beverage = new Beverage('Suco', 15);
     this._meal.add(beverage);
     return this;
   }
+
   makeDessert(): this {
     const dessert = new Dessert('Pudim', 6);
     this._meal.add(dessert);
